@@ -1,0 +1,31 @@
+@import "../../../styles/colors.scss";
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  padding: 0.4rem 0;
+}
+
+.line_1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line_1_right{
+  display: flex;
+  align-items: center;
+}
+
+.auth_func_btns{
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.line_1_btn{
+  cursor: pointer;
+  &:hover{
+    color: #000
+  }
+}

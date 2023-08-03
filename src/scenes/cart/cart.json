@@ -1,0 +1,58 @@
+[
+     {
+         "_id": "c1",
+         "userId": "u1",
+         "listProduct": [
+             {
+                "id":1,
+                "productName":"Áo thun nữ",
+                "img":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxzJnNN8cxsx5chYF1_hxI3mEodLejnTKxeWs1OQYTAwsofJaiXfiYITVs8845UbL8fQ8hL40-86UnLvC7K4f5sbJuGO_Nduu0BCNfgL7GnTr8n912tk-62HU0YoAEddYT0_k&usqp=CAc",
+                "size":"L",
+                "color":"Xanh lá cây",
+                "price":199000,
+                 "quantity": 1,
+                 "select": false
+             },
+             { 
+                "id":2,
+                "productName":"Áo sơ mi nam",
+                "img":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSy_42x5jiHTPjH-xEOpsqdIuQYYjdMzGMkpq79lCoSaSCHwS0wfk0ejdXZ4_roXqRI5irJEgFRFEcA-wrHpaKffqFsadMyhvJYW7R_H97_WlionvHnQ0mZCCbyHyO8ZD4O7cE&usqp=CAc",
+                "size":"xL",
+                "color":"Đen",
+                "price":399000,
+                 "quantity": 2,
+                 "select": true
+             },
+             {
+                "id":3,
+                "productName":"Bộ bóng đá",
+                "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbDJorSopneNpBU6Fkct1SkvXnWI9GbgiSLDVjFAKBvg&s",
+                "size":"xL",
+                "color":"Xanh,tím",
+                "price":260000,
+                 "quantity": 2,
+                 "select": false
+             },
+             {
+                "id":4,
+                "productName":"Giầy thể thao",
+                "img":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRO7Oxh47_Oyjr7BdfRYu2vMtv_09m_aieA2Rnby4-mz80QSbgAd6zNQsyKovHUJnZJhagwyHT2fcLGxFw3oqYu2FNAvB-qDu2B2kzQM7PJEzIPxSfeVoyq&usqp=CAc",
+                "size":"40",
+                "color":"Xám",
+                "price":399000,
+                 "quantity": 1,
+                 "select": false
+             },
+             {
+                "id":5,
+                "productName":"Quần thể thao",
+                "img":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS2fe3dnDOqB0OmgTwlSMTRqeYMEhkXAA_Cb04m4Ll8wa5qGiK71qgHNqwf0HytbTwgZD-0eJ1bjZMmzUOihxubzta8-CRCezyHfResGabHyg3TMOtj-E9N94i5u6saOPjE22Xk&usqp=CAc",
+                "size":"xL",
+                "color":"Đen",
+                "price":299000,
+                 "quantity": 1,
+                 "select": true
+             }     
+         ]
+     }     
+ ]

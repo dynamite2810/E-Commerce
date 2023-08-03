@@ -1,0 +1,23 @@
+@import "../../../styles/colors.scss";
+
+
+.left-portfolio{
+    border-top: 1px solid $black1;
+    border-bottom: 1px solid $black1;
+    border-right: 0.5px solid $black1;
+    border-left: 1px solid $black1;
+}
+
+.middle-portfolio{
+    border-top: 1px solid $black1;
+    border-bottom: 1px solid $black1;
+    border-right: 0.5px solid $black1;
+    border-left: 0.5px solid $black1;
+}
+
+.right-portfolio{
+    border-top: 1px solid $black1;
+    border-bottom: 1px solid $black1;
+    border-right: 1px solid $black1;
+    border-left: 0.5px solid $black1;
+}

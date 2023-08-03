@@ -1,0 +1,26 @@
+.center{
+     text-align:center;
+}
+.center .ant-table-cell{
+     text-align:center;
+}
+
+
+.custom_popconfirm{
+  .ant-popconfirm-buttons{
+    .ant-btn-default.ant-btn-sm {
+      background-color: red !important;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;;
+      }
+
+      .ant-btn-primary.ant-btn-sm {
+           background-color: green !important;
+           color: white;
+           font-size: 16px;
+           font-weight: bold;
+         }       
+  } 
+}
+   
