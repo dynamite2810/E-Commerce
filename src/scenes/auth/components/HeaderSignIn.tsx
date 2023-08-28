@@ -18,7 +18,6 @@ const HeaderSignIn = () => {
           <Image width={140} height={140} src="/logo-red.svg" alt={''} />
           <p className="text-[46px] font-normal ml-2">{getTextInLogo()}</p>
         </div>
-        <div className="text-dart-red text-[24px] mb-2">Bạn cần trợ giúp?</div>
       </div>
     </Wrap>
   );

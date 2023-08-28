@@ -3,9 +3,8 @@ import { useRouter } from 'next/router';
 
 import Wrap from '../auth/components/Wrap';
 
-const ScanQrCode = () => {
+const Payment = () => {
   const router = useRouter();
-  const { point, bankName, accountNumber } = router.query;
 
   return (
     <Wrap className="h-max py-6">
@@ -14,8 +13,7 @@ const ScanQrCode = () => {
         style={{ background: '#FFF0F0', border: '1px solid black' }}
       >
         <div className="mx-10 my-0" style={{ borderBottom: '1px solid black' }}>
-          <h3>Nạp tiền</h3>
-          <p className="mb-4">Quản lý thông tin ví</p>
+          <h3>Thanh toán đơn hàng</h3>
         </div>
         <div className="flex justify-center mt-4">
           <div className="mr-20">
@@ -30,7 +28,7 @@ const ScanQrCode = () => {
           <div>
             <Image
               // src={`https://img.vietqr.io/image/${bankName}-${accountNumber}-qr_only.png?amount=${point}`}
-              src={`https://img.vietqr.io/image/Vietinbank-107870390625-qr_only.png?amount=${point}`}
+              src={`https://img.vietqr.io/image/Vietinbank-107870390625-qr_only.png?amount=716000`}
               alt="qr-code"
               width={250}
               height={250}
@@ -46,7 +44,7 @@ const ScanQrCode = () => {
               fontSize: '20px',
               width: '150px',
             }}
-            onClick={() => router.push('/my-wallet')}
+            onClick={() => router.push('/')}
           >
             Hoàn thành
           </button>
@@ -55,4 +53,4 @@ const ScanQrCode = () => {
     </Wrap>
   );
 };
-export default ScanQrCode;
+export default Payment;

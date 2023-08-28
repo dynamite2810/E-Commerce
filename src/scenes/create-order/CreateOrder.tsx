@@ -3,20 +3,23 @@ import Wrap from '../../scenes/auth/components/Wrap';
 import { useAppSelector } from '@/redux/hook';
 import cartListProduct from '../cart/cart.json';
 import { ProductType } from './interface/product.interface';
-import ModalChangeAddress from './modal/changeAddress.modal';
+// import ModalChangeAddress from './modal/changeAddress.modal';
 import Image from 'next/image';
 import SelectLocation from './Locations/SelectLocation';
+import { useRouter } from 'next/router';
 
 function CreateOrder() {
   const auth = useAppSelector((state) => state.authState);
   const [productDone, setProductDone] = useState<ProductType[]>([]);
   const [totalAmount, setTotalAmount] = useState(0);
-  const [transport, setTransport] = useState(180000);
+  const [transport, setTransport] = useState(18000);
   const [showCreateLocation, setShowCreateLocation] = useState(false);
 
   const handleAddressChangeClick = () => {
     setShowCreateLocation(true);
   };
+
+  const router = useRouter();
 
   const handleWallet = () => {
     const wallet = document.querySelector('.wallet');
@@ -79,7 +82,7 @@ function CreateOrder() {
             <div className="font-bold">
               {auth.currentUser?.name} (+84) {auth.currentUser?.phone.replace(/^0/, '')}
             </div>
-            <div>Số 05, Trung Hòa, Cầu Giấy, Hà Nội</div>
+            <div>144 Xuân Thuỷ, Cầu Giấy, Hà Nội</div>
             <div
               className="text-indigo-500 underline cursor-pointer"
               onClick={handleAddressChangeClick}
@@ -174,21 +177,21 @@ function CreateOrder() {
               </div>
             </div>
             <div className="flex pl-4">
-              <div className="mt-1">Chọn thẻ</div>
+              {/* <div className="mt-1">Chọn thẻ</div> */}
               <div className="ml-10">
                 <div className="flex mb-3 relative">
-                  <input type="checkbox" />
+                  {/* <input type="checkbox" /> */}
                   <Image height={20} width={20} className="ml-4 w-8" src="/visa 9.png" alt="visa" />
 
-                  <div className="ml-8 mt-1 w-32">Techcombank</div>
-                  <div className="mt-1">***6512</div>
+                  <div className="ml-8 mt-1 w-32">Vietinbank</div>
+                  <div className="mt-1">107870390625</div>
                 </div>
-                <div className="flex">
+                {/* <div className="flex">
                   <input type="checkbox" />
                   <Image width={20} height={20} className="ml-4 w-8" src="/visa 9.png" alt="visa" />
                   <div className="ml-8 mt-1 w-32">TP Bank</div>
                   <div className="mt-1">***2342</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -214,7 +217,7 @@ function CreateOrder() {
           </div>
           <div className="border border-black"></div>
           <div className="p-4 text-right">
-            <button className="bg-red-500 w-36 p-2 text-white rounded-lg">Đặt hàng</button>
+            <button className="bg-red-500 w-36 p-2 text-white rounded-lg" onClick={() => {router.push('/payment')}}>Đặt hàng</button>
           </div>
         </div>
       </div>

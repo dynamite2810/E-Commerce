@@ -20,18 +20,21 @@ const ChargeMoney = () => {
   const createPaymentHistory = async () => {
     // call api to get data
     if (currentMoney >= 50000) {
-      const response: AxiosResponse<IPaymentHistory> = await ApiClient.post(
-        `/payment-history/payment-histories`,
-        { point: currentMoney }
-      );
-      router.push({
-        pathname: '/scan-qrcode',
-        query: {
-          bankName: response.data?.bankName,
-          accountNumber: response.data?.accountNumber,
-          point: currentMoney,
-        },
-      });
+      // const response: AxiosResponse<IPaymentHistory> = await ApiClient.post(
+      //   `/payment-history/payment-histories`,
+      //   { point: currentMoney }
+      // );
+      // router.push({
+      //   pathname: '/scan-qrcode',
+      //   query: {
+      //     // bankName: response.data?.bankName,
+      //     // accountNumber: response.data?.accountNumber,
+      //     point: currentMoney,
+      //   },
+      // });
+      await ApiClient.post(`/payment-history/payment-histories`, { point: currentMoney });
+      console.log("point");
+      router.push('/scan-qrcode');
     } else {
       router.push('/charge-money');
     }

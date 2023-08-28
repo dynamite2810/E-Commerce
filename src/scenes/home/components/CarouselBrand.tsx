@@ -43,10 +43,10 @@ const CarouselBrand = () => {
       <div className="w-3/5">
         <div className="flex justify-between mb-5 text-xl">
           <p className=" font-normal text-2xl">Nhãn hàng</p>
-          <div className="flex pr-10">
+          {/* <div className="flex pr-10">
             <p className=" font-normal text-xl cursor-pointer">Xem thêm</p>
             <Image src="next-icon.svg" width="15" height={15} alt={''} />
-          </div>
+          </div> */}
         </div>
         <Carousel
           showStatus={false}

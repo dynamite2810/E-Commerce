@@ -28,11 +28,11 @@ const HeaderCartDropDown = ({ item }: IPropsProduct) => {
                 alt={''}
                 onClick={() => router.push('/cart')}
               />
-              <div style={{ right: -10, top: -10, position: 'absolute', fontSize: 15 }}>
+              {/* <div style={{ right: -10, top: -10, position: 'absolute', fontSize: 15 }}>
                 {arrProductCart.length}
-              </div>
+              </div> */}
             </div>
-            <div
+            {/* <div
               style={{ left: '50%', transform: 'translate(-50%, 0%)' }}
               className="invisible rounded-md border border-black absolute z-50 w-96 bg-gray-100 px-6 right-1 text-gray-800 shadow-xl group-hover:visible"
             >
@@ -61,31 +61,12 @@ const HeaderCartDropDown = ({ item }: IPropsProduct) => {
                   Xem thêm
                 </button>
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-const arrProductCart = [
-  {
-    name: 'ポケッeqwwwwwwwwwwwwwwwwwwweeee',
-    price: '¥3,990',
-  },
-  {
-    name: '3Dカット）',
-    price: '¥2,990',
-  },
-  {
-    name: 'ポケッawwwwwwwwwwwwwwwwwwwwwwwwsdaw',
-    price: '¥5,990',
-  },
-  {
-    name: '3Dカットqwe2sd23213213123）',
-    price: '¥1,990',
-  },
-];
 
 export default HeaderCartDropDown;

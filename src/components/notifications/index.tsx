@@ -17,7 +17,7 @@ const Notification = (props: NotificationProps) => {
       {showNotification && (
         <div className="w-[40vw]">
           <div className="h-14 px-4 border-b border-dart-red flex items-center justify-between mb-0.1">
-            <div className="text-red-600 text-2xl font-bold">Thông báo (6)</div>
+            <div className="text-red-600 text-2xl font-bold">Thông báo</div>
             <div className="flex items-center">
               <div onClick={() => setShowNotification(false)}>
                 <Image width={42} height={42} src="/close-icon.svg" alt={''} />

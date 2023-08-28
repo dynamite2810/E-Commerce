@@ -119,7 +119,7 @@ const UserWallet = () => {
           <p className="mb-4">Quản lý thông tin ví</p>
         </div>
         <div className="flex mt-5">
-          <div className="w-3/4 ml-10" style={{ borderRight: '1px solid black' }}>
+          <div className="w-full ml-10 mr-10">
             <div className="flex justify-between">
               <div className="flex">
                 <Image
@@ -189,7 +189,7 @@ const UserWallet = () => {
               <Page />
             </div>
           </div>
-          <div className="w-1/4 mt-3 mr-10">
+          {/* <div className="w-1/4 mt-3 mr-10">
             <div
               style={{
                 display: 'flex',
@@ -237,7 +237,7 @@ const UserWallet = () => {
               />
               Chọn ảnh
             </label>
-          </div>
+          </div> */}
         </div>
         <button
           className=" items-center justify-center border border-black mt-10 bg-[#ee2d29] hover:opacity-90"

@@ -221,7 +221,7 @@ function Profile() {
             {/*content left */}
             <div className={styles.form_profile_content_left}>
               <div>
-                <div className="flex mt-2 mb-2">
+                {/* <div className="flex mt-2 mb-2">
                   <p className="w-28 text-gray-400">Tên đăng nhập</p>
                   <div>
                     <input
@@ -241,7 +241,7 @@ function Profile() {
                     />
                     {Error('fullName')}
                   </div>
-                </div>
+                </div> */}
                 <div className="flex mt-2 mb-2">
                   <p className="w-28 text-gray-400">Tên</p>
                   <div>

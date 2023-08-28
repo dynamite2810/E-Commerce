@@ -16,13 +16,24 @@ function Cart() {
   const [quantity, setQuantity] = useState(1);
   const [selectedRowKeys, setSelectedRowKeys] = useState<DataType[]>([]);
   const [total, setTotal] = useState(0);
-  const [totalQuantity, setTotalQuantity] = useState(0);
+  // const [totalQuantity, setTotalQuantity] = useState(0)
+  const [totalAmount, setTotalAmount] = useState(1556000);
   const [isSelectAllChecked, setIsSelectAllChecked] = useState(false);
   const [isModalOpenDeleteAll, setIsModalOpenDeleteAll] = useState(false);
   //handle delete table antd
   const handleDeleteAntd = (key: React.Key) => {
     const newData = dataSource.filter((item) => item.key !== key);
     setDataSource(newData);
+    // console.log(newData);
+    var amount = 0;
+    for(var index in newData) {
+      amount += newData[index].price;
+    }
+    setTotalAmount(amount);
+  };
+  const handleChangeQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = +e.target.value;
+    setQuantity(newValue);
   };
   //list product
   const listProductCart = async () => {
@@ -42,18 +53,6 @@ function Cart() {
             select: product.select,
           });
         });
-        let newTotal = 0;
-        let newTotalQuantity = 0;
-        dataCart.map((product) => {
-          if (product.select === true) {
-            console.log(product);
-            newTotal += product.total;
-            newTotalQuantity += product.quantity;
-            setSelectedRowKeys([product]);
-          }
-        });
-        setTotal(newTotal);
-        setTotalQuantity(newTotalQuantity);
         setDataSource(dataCart);
       });
     } catch (error) {
@@ -65,13 +64,6 @@ function Cart() {
     listProductCart();
   }, [total]);
 
-  // const [open, setOpen] = useState(true);
-  // const hide = () => {
-  //   setOpen(false);
-  // };
-  // const handleOpenChange = () => {
-  //   setOpen(true);
-  // };
   const columns: ColumnsType<DataType> = [
     {
       title: 'Sản phẩm',
@@ -80,7 +72,6 @@ function Cart() {
       render: (value, record) => {
         return (
           <div>
-            <div>Name_Shop</div>
             <div className="flex">
               <div className="flex">
                 <img className="w-16 h-16 object-cover mr-5" src={record.img} alt="" />
@@ -101,7 +92,7 @@ function Cart() {
       render: (price) => {
         return (
           <div>
-            <div className="text-slate-500">{price.toLocaleString()}đ</div>
+            <div className="text-slate-500 pr-10">{price.toLocaleString()} đ</div>
           </div>
         );
       },
@@ -116,18 +107,19 @@ function Cart() {
             <button
               className=" w-8 bg-slate-300 mr-1 outline-none rounded-none"
               onClick={() => {
-                if (quantity != 1) {
-                  setQuantity(quantity - 1);
-                }
+                  quantity !== 1 ? setQuantity(quantity - 1) : 1;
               }}
             >
               -
             </button>
-            <input
-              className="w-14 bg-slate-300 flex justify-center align-items-center text-center outline-none"
-              type="number"
-              value={text}
-            />
+            
+              <input
+                type="number"
+                className="w-14 bg-slate-300 flex justify-center align-items-center text-center outline-none"
+                name="custom-input-number"
+                value={quantity}
+                onChange={handleChangeQuantity}
+              />
             <button
               className=" w-8 bg-slate-300 ml-1 outline-none rounded-none"
               onClick={() => {
@@ -148,13 +140,13 @@ function Cart() {
         return (
           <div>
             {/* .toLocaleString() */}
-            <div className="text-slate-500">{total.toLocaleString()}đ</div>
+            <div className="text-slate-500">{total.toLocaleString()} đ</div>
           </div>
         );
       },
     },
     {
-      title: 'Thao tác',
+      title: 'Xoá',
       dataIndex: 'delete',
       className: styles.center,
       render: (_, record: { key: React.Key }) =>
@@ -163,7 +155,7 @@ function Cart() {
           //   <img className="w-8" src="/delete 5.png" alt="" />
           // </div>
           <Popover
-            title="Bạn có chắc muốn xóa?"
+            title="Bạn có chắc chắn muốn xóa?"
             placement="top"
             trigger="click"
             // open={open}
@@ -262,20 +254,19 @@ function Cart() {
           </div>
           <div className="flex justify-between mt-2">
             <div className="flex">
-              <div className="mr-6 cursor-pointer" onClick={() => setIsModalOpenDeleteAll(true)}>
+              {/* <div className="mr-6 cursor-pointer text-rose-600" onClick={() => setIsModalOpenDeleteAll(true)}>
                 Xóa
-              </div>
+              </div> */}
               <ModalDelete
                 isModalOpenDeleteAll={isModalOpenDeleteAll}
                 setIsModalOpenDeleteAll={setIsModalOpenDeleteAll}
                 handleDeleteAll={handleDeleteAll}
               />
-              <div>Bỏ sản phẩm không hoạt động</div>
             </div>
             <div>
               <p>
-                Tổng thanh toán ({totalQuantity.toLocaleString()}) sản phẩm:{' '}
-                {total.toLocaleString()}đ
+                Tổng thanh toán ({dataSource.length}) sản phẩm:{' '}
+                {0 ? totalAmount : totalAmount.toLocaleString()} đ
               </p>
             </div>
           </div>

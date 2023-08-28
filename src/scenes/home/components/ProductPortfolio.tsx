@@ -46,7 +46,7 @@ const ProductPortfolio: React.FC = () => {
 
   return (
     <div className="mt-3">
-      <div className="mb-3 font-medium text-2xl relative">Danh mục sản phẩm</div>
+      {/* <div className="mb-3 font-medium text-2xl relative">Danh mục sản phẩm</div>
       <Carousel
         className=" shadow-md shadow-slate-400"
         responsive={responsive}
@@ -91,7 +91,7 @@ const ProductPortfolio: React.FC = () => {
             </div>
           );
         })}
-      </Carousel>
+      </Carousel> */}
     </div>
   );
 };

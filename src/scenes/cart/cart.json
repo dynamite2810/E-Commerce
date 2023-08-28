@@ -9,9 +9,9 @@
                 "img":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxzJnNN8cxsx5chYF1_hxI3mEodLejnTKxeWs1OQYTAwsofJaiXfiYITVs8845UbL8fQ8hL40-86UnLvC7K4f5sbJuGO_Nduu0BCNfgL7GnTr8n912tk-62HU0YoAEddYT0_k&usqp=CAc",
                 "size":"L",
                 "color":"Xanh lá cây",
-                "price":199000,
+                "price": 199000,
                  "quantity": 1,
-                 "select": false
+                 "select": true
              },
              { 
                 "id":2,
@@ -20,7 +20,7 @@
                 "size":"xL",
                 "color":"Đen",
                 "price":399000,
-                 "quantity": 2,
+                 "quantity": 1,
                  "select": true
              },
              {
@@ -28,9 +28,9 @@
                 "productName":"Bộ bóng đá",
                 "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbDJorSopneNpBU6Fkct1SkvXnWI9GbgiSLDVjFAKBvg&s",
                 "size":"xL",
-                "color":"Xanh,tím",
+                "color":"Xanh, tím",
                 "price":260000,
-                 "quantity": 2,
+                 "quantity": 1,
                  "select": false
              },
              {
@@ -41,7 +41,7 @@
                 "color":"Xám",
                 "price":399000,
                  "quantity": 1,
-                 "select": false
+                 "select": true
              },
              {
                 "id":5,
@@ -51,7 +51,7 @@
                 "color":"Đen",
                 "price":299000,
                  "quantity": 1,
-                 "select": true
+                 "select": false
              }     
          ]
      }     

@@ -33,11 +33,11 @@ const Suggest = ({ products }: ISuggestProps) => {
           );
         })}
       </div>
-      <div className="flex justify-center mt-10">
+      {/* <div className="flex justify-center mt-10">
         <div className="w-1/4 text-center font-sans font-normal text-white text-2xl bg-dart-red py-3 cursor-pointer">
           Xem thêm
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
